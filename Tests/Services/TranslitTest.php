@@ -6,13 +6,13 @@
 
 namespace Azatyan\ArmenianLocaleBundle\Tests\Services;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Azatyan\ArmenianLocaleBundle\Services\Translit;
 
 /**
  * Class TrasnlitTest
  * @package Azatyan\ArmenianLocaleBundle\Tests\Services
  */
-class TrasnlitTest extends WebTestCase
+class TrasnlitTest extends extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -20,13 +20,12 @@ class TrasnlitTest extends WebTestCase
      */
     public function testLatinToArmenian()
     {
-        $client = static::createClient();
-        $container = $client->getContainer();
-
         $input = "Barev";
         $expected = "Բարև";
+        
+        $translit = new Translit();
 
-        $actual =  $container->get("armenian.locale.translit")->latinToArmenian($input);
+        $actual =  $translit->latinToArmenian($input);
         $this->assertEquals($expected, $actual,"Translit Test Failed");
     }
 }
