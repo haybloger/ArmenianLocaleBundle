@@ -3,5 +3,6 @@ ArmenianLocaleBundle
 
 Integrate Armenian to SF2
 
-==install
+install
+=======
 "tigran/armenian-locale-bundle": "dev-master"
