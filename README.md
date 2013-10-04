@@ -11,4 +11,6 @@ Add this to composer.json and run composer update command
 
 Usage <br />
 Translit
-$this->get("armenian.locale.translit")->latinToArmenian("Barev"); should be converted to "Բարև"
+```php
+$this->get("armenian.locale.translit")->latinToArmenian("Barev");  // should be converted to "Բարև"
+```
