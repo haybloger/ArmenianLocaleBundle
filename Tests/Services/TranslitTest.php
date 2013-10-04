@@ -12,7 +12,7 @@ use Azatyan\ArmenianLocaleBundle\Services\Translit;
  * Class TrasnlitTest
  * @package Azatyan\ArmenianLocaleBundle\Tests\Services
  */
-class TrasnlitTest extends extends \PHPUnit_Framework_TestCase
+class TrasnlitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
