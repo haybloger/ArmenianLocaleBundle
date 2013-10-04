@@ -7,7 +7,7 @@
 
 namespace Azatyan\ArmenianLocaleBundle\Tests\Services;
 
-class TrasnlitTest extends  extends Symfony\Bundle\FrameworkBundle\Test\WebTestCase
+class TrasnlitTest extends Symfony\Bundle\FrameworkBundle\Test\WebTestCase
 {
     
     
