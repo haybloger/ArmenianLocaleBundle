@@ -1,9 +1,9 @@
-ArmenianLocaleBundle
+Armenian Locale Bundle
 ====================
 
-Integrate Armenian to SF2
+This Bundle Integrates Armenian to SF2
 
-install
+Install
 =======
 ```bash
 php composer.phar require "tigran/armenian-locale-bundle";
