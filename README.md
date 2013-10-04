@@ -10,7 +10,10 @@ php composer.phar require "tigran/armenian-locale-bundle";
 php composer.phar update;
 ```
 
-Activate The Bundle in SymfonyppKernel file
+Activate The Bundle in Symfony's  AppKernel.php file
+```php
+new Azatyan\ArmenianLocaleBundle\AzatyanArmenianLocaleBundle(),
+```
 
 Usage
 =============
