@@ -7,16 +7,27 @@
 
 namespace Azatyan\ArmenianLocaleBundle\Tests\Services;
 
-
-class TrasnlitTest extends \PHPUnit_Framework_TestCase
+class TrasnlitTest extends  extends Symfony\Bundle\FrameworkBundle\Test\WebTestCase
 {
+    
+    
+    public function setUp()
+    {
+        $kernel = self::getKernelClass();
+
+        self::$kernel = new $kernel('dev', true);
+        self::$kernel->boot();
+    }
+
+    
+    
+    
     public function testLatinToArmenian()
     {
 
         $input = "Barev";
-        $output = "Բարև";
-        // TODO: Implement This
-        
-        $this->assertEquals($input, $output);
+        $output =  self::$kernel->getContainer()->get("armenian.locale.translit")->latinToArmenian($input);
+        $expected = "Բարև";
+        $this->assertEquals($expected, $output);
     }
 }
