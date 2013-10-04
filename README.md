@@ -5,8 +5,13 @@ Integrate Armenian to SF2
 
 install
 =======
-Add this to composer.json and run composer update command
-<b>"tigran/armenian-locale-bundle": "dev-master"</b>
+```bash
+php composer.phar require "tigran/armenian-locale-bundle";
+php composer.phar update;
+```
+
+Activate The Bundle in Symfony2 appKernel file if you can )
+
 
 
 Usage <br />
