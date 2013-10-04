@@ -30,4 +30,3 @@ class TrasnlitTest extends WebTestCase
         $this->assertEquals($expected, $actual,"Translit Test Failed");
     }
 }
-

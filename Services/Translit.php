@@ -5,7 +5,6 @@
 
 namespace Azatyan\ArmenianLocaleBundle\Services;
 
-
 /**
  * Class Translit
  * @package Azatyan\ArmenianLocaleBundle\Services
@@ -13,15 +12,15 @@ namespace Azatyan\ArmenianLocaleBundle\Services;
  * To resolve armenian translit issues
  *
  */
-class Translit {
-
-
+class Translit
+{
     /**
      * Converts latin symbols in text to armenian translit equivalents
      * @param $inString
      * @return string
      */
-    public function latinToArmenian($inString) {
+    public function latinToArmenian($inString)
+    {
         $inOneCharLetters = "ABGDEZILXKHMYNOPJSVWTRCQFabgdez@ilx\$kh&mynopjsvwtrcqf?";
         $outOneCharLetters = "ԱԲԳԴԵԶԻԼԽԿՀՄՅՆՈՊՋՍՎՎՏՐՑՔՖաբգդեզըիլխծկհճմյնոպջսվվտրցքֆ՞";
         $inTwoCharLetters = "YEYeE'EEEeY'@@THThZHZhJHJhKHKhC'TSTsD'DZDzGHGhTWTw&&SHShVOVoCHChR'RRRrP'PHPhO'OOOoyee'eey'thzhjhkhc'tsd'dzghtwshvochr'rrp'phevo'oo";
@@ -49,22 +48,19 @@ class Translit {
 
                 $pos = mb_strpos($inThreeCharLetters, $currentCharacter,0, 'UTF-8');
 
-
-
                 if ($pos == 0) {
                     $pos = mb_strpos($inOneCharLetters, $currentCharacter, 0, 'UTF-8');
                     if ($pos == 0) {
                         $outString .= $currentCharacter;
-                    }
-                    else {
+                    } else {
                         $outString .= mb_substr($outOneCharLetters, $pos, 1, 'UTF-8');
                     }
-                } else
-                {
+                } else {
                     $outString .= mb_substr($outThreeCharLetters, $pos * 2, 2, 'UTF-8');
                 }
             }
         }
+
         return $outString;
     }
 }
