@@ -1,7 +1,7 @@
 Armenian Locale Bundle
 ====================
 
-This Bundle Integrates Armenian to SF2
+This Bundle Integrates Armenian to Symfony2
 
 Install
 =======
@@ -10,9 +10,7 @@ php composer.phar require "tigran/armenian-locale-bundle";
 php composer.phar update;
 ```
 
-Activate The Bundle in Symfony2 appKernel file if you can )
-
-
+Activate The Bundle in SymfonyppKernel file
 
 Usage
 =============
