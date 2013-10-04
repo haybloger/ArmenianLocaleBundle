@@ -1,33 +1,33 @@
 <?php
 
-/** 
- * Test Translit Class
-**/
-
+/**
+ *  @author Tigran Azatyan
+ */
 
 namespace Azatyan\ArmenianLocaleBundle\Tests\Services;
 
-class TrasnlitTest extends Symfony\Bundle\FrameworkBundle\Test\WebTestCase
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
+/**
+ * Class TrasnlitTest
+ * @package Azatyan\ArmenianLocaleBundle\Tests\Services
+ */
+class TrasnlitTest extends WebTestCase
 {
-    
-    
-    public function setUp()
-    {
-        $kernel = self::getKernelClass();
 
-        self::$kernel = new $kernel('dev', true);
-        self::$kernel->boot();
-    }
-
-    
-    
-    
+    /**
+     *  Check Translit function
+     */
     public function testLatinToArmenian()
     {
+        $client = static::createClient();
+        $container = $client->getContainer();
 
         $input = "Barev";
-        $output =  self::$kernel->getContainer()->get("armenian.locale.translit")->latinToArmenian($input);
         $expected = "Բարև";
-        $this->assertEquals($expected, $output);
+
+        $actual =  $container->get("armenian.locale.translit")->latinToArmenian($input);
+        $this->assertEquals($expected, $actual,"Translit Test Failed");
     }
 }
+
