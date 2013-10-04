@@ -3,7 +3,7 @@ Armenian Locale Bundle
 
 This Bundle Integrates Armenian to Symfony2
 
-<img src="https://travis-ci.org/tigranazatyan/ArmenianLocaleBundle.png" />
+<img onclick="alert('Hello')" src="https://travis-ci.org/tigranazatyan/ArmenianLocaleBundle.png" />
 
 
 
