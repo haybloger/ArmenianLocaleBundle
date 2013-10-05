@@ -1,11 +1,14 @@
 {
     "name": "tigran/armenian-locale-bundle",
+    "type": "symfony-bundle",
     "description": "Integrate Armenian to SF2",
+    "keywords": ["armenian", "armenia","hayeren","հայերեն"],
     "license": "MIT",
     "authors": [
         {
             "name": "Tigran",
-            "email": "tigran@azatyan.info"
+            "email": "tigran@azatyan.info",
+            "role" : "Developer"
         }
     ],
     "minimum-stability": "dev",
