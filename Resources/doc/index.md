@@ -10,7 +10,7 @@ new Azatyan\ArmenianLocaleBundle\AzatyanArmenianLocaleBundle(),
 ```
 Usage
 =============
-<p>Translit Helper (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> project for JS Logic :) </p>
+<p>1. Translit Service (thanks to <a target="_blank" href="http://hayeren.am/">www.hayeren.am</a> project for JS Logic.</p>
 ```php
 $this->get("armenian.locale.translit")->latinToArmenian("Barev");  // should be convert to "Բարև"
 ```
