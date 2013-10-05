@@ -22,7 +22,7 @@ class TrasnlitTest extends \PHPUnit_Framework_TestCase
     {
         $input = "Barev";
         $expected = "Բարև";
-        
+
         $translit = new Translit();
 
         $actual =  $translit->latinToArmenian($input);
