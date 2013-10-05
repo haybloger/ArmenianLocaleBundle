@@ -33,18 +33,16 @@ class Encoding
     public function Armscii2Unicode($inString)
     {
 
-        mb_internal_encoding("UTF-8");
-
-        $inStringLength = mb_strlen($inString);
+        $inStringLength = mb_strlen($inString, "UTF-8");
         $outString = "";
 
         for ($i = 0; $i < $inStringLength; $i++) {
-          $currentCharacter = mb_substr($inString, 1);
-          $pos = mb_strpos( $this->armsciiLetters,$currentCharacter);
+          $currentCharacter = mb_substr($inString, 1, "UTF-8");
+          $pos = mb_strpos( $this->armsciiLetters,$currentCharacter, "UTF-8");
           if ($pos < 0) {
               $outString .= $currentCharacter;
           } else {
-              $outString .= mb_substr($this->unicodeLetters, $i);
+              $outString .= mb_substr($this->unicodeLetters, $i, "UTF-8");
           }
         }
 
@@ -58,20 +56,19 @@ class Encoding
      */
     public function Unicode2Armscii($inString)
     {
-        mb_internal_encoding("UTF-8");
 
-        $inStringLength = mb_strlen($inString);
+        $inStringLength = mb_strlen($inString, "UTF-8");
         $outString = "";
 
         for ($i = 0; $i < $inStringLength; $i++) {
 
-          $currentCharacter = mb_substr($inString,$i);
+          $currentCharacter = mb_substr($inString,$i, "UTF-8");
 
-          $pos = mb_strpos($this->unicodeLetters, $currentCharacter,1);
+          $pos = mb_strpos($this->unicodeLetters, $currentCharacter,1, "UTF-8");
           if ($pos < 0) {
               $outString .= $currentCharacter;
           } else {
-              $outString .= mb_substr($this->armsciiLetters, 1);
+              $outString .= mb_substr($this->armsciiLetters, 1, "UTF-8");
           }
       }
 
